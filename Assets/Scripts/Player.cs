@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public int startingAmountOfbullets = 6;
     private int currentAmountOfBullets;
 
-    public float playerMoveSpeed = 1f;
+    public float playerMoveSpeed;
 
     void Start()
     {
@@ -26,20 +26,19 @@ public class Player : MonoBehaviour
 
     }
 
-    private float minPos = -0.9f;
-    private float maxPos = 1f;
+    private float minPosX = -3.4f;
+    private float maxPosX = 3.4f;
 
    public void HandleMovePlayer(Vector3 direction)
     {
         transform.Translate(direction * playerMoveSpeed * Time.deltaTime);
         Vector3 clampedPosition = transform.position;
         // Now we can manipulte it to clamp the y element
-        clampedPosition.x = Mathf.Clamp(clampedPosition.x, minPos, maxPos);
+        clampedPosition.x = Mathf.Clamp(clampedPosition.x, minPosX, maxPosX);
         // re-assigning the transform's position will clamp it
         transform.position = clampedPosition;
     }
 
-    public Button button;
     public void HandlePlayerShoot()
     {
         
