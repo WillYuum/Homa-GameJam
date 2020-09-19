@@ -277,6 +277,8 @@ GameObject:
   - component: {fileID: 520114776}
   - component: {fileID: 520114775}
   - component: {fileID: 520114774}
+  - component: {fileID: 520114778}
+  - component: {fileID: 520114777}
   m_Layer: 5
   m_Name: RightToggle
   m_TagString: Untagged
@@ -384,6 +386,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520114772}
   m_CullTransparentMesh: 0
+--- !u!114 &520114777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520114772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 520114778}
+          m_MethodName: OnClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 520114778}
+          m_MethodName: OnRelease
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &520114778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520114772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e05df6c004a2144b19e507eff058ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedDirection: 1
 --- !u!1 &598350929
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,6 +473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameIsOn: 0
   player: {fileID: 2516382434390084506}
+  isHoldingMoveButton: 0
 --- !u!4 &598350931
 Transform:
   m_ObjectHideFlags: 0
@@ -514,13 +573,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.34836084, y: 0.059711266, z: 0.0694524, w: 0.932875}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 39.916, y: 12.025001, z: 12.896001}
 --- !u!1 &774584036
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,6 +950,8 @@ GameObject:
   - component: {fileID: 1148607759}
   - component: {fileID: 1148607758}
   - component: {fileID: 1148607757}
+  - component: {fileID: 1148607761}
+  - component: {fileID: 1148607760}
   m_Layer: 5
   m_Name: LeftToggle
   m_TagString: Untagged
@@ -960,18 +1021,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1148607758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 598350930}
-        m_MethodName: OnClickLeftToggleButton
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1148607758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1009,6 +1059,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148607755}
   m_CullTransparentMesh: 0
+--- !u!114 &1148607760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148607755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1148607761}
+          m_MethodName: OnClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1148607761}
+          m_MethodName: OnRelease
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1148607761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148607755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e05df6c004a2144b19e507eff058ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedDirection: 0
 --- !u!1 &1183949230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,7 +1128,7 @@ GameObject:
   - component: {fileID: 1183949232}
   - component: {fileID: 1183949231}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1117,6 +1223,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2516382434127135873, guid: 830c0ce40959e724fa870adb50a6fc86,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.349
+      objectReference: {fileID: 0}
     - target: {fileID: 2516382434199616569, guid: 830c0ce40959e724fa870adb50a6fc86,
         type: 3}
       propertyPath: m_Name
@@ -1125,7 +1236,7 @@ PrefabInstance:
     - target: {fileID: 2516382434199616573, guid: 830c0ce40959e724fa870adb50a6fc86,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.026
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2516382434199616573, guid: 830c0ce40959e724fa870adb50a6fc86,
         type: 3}
@@ -1176,6 +1287,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2516382434199616573, guid: 830c0ce40959e724fa870adb50a6fc86,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2516382434199616573, guid: 830c0ce40959e724fa870adb50a6fc86,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2516382434199616573, guid: 830c0ce40959e724fa870adb50a6fc86,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 830c0ce40959e724fa870adb50a6fc86, type: 3}

@@ -61,21 +61,4 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-
-    public void OnClickLeftToggleButton()
-    {
-        player.HandleMovePlayer();
-    }
-
-
-    private void OnClickRightToggleButton()
-    {
-
-    }
-
-    private void onClickShootButton()
-    {
-
-    }
-
 }
