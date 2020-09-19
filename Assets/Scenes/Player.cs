@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,8 +11,7 @@ public class Player : MonoBehaviour
     public int startingAmountOfbullets = 6;
     private int currentAmountOfBullets;
 
-    private float currentPlayerSpeed = 1.0f;
-
+    private float playerMoveSpeed = 1.0f;
 
     void Start()
     {
@@ -21,6 +21,22 @@ public class Player : MonoBehaviour
 
 
     void Update()
+    {
+        
+    }
+
+
+   public void HandleMovePlayer()
+    {
+        //if(direction)
+        //var x = new GameObject().GetComponent<Button>();
+        print("Hello world");
+        //Input.GetButtonD
+
+    }
+
+    public Button button;
+    public void HandlePlayerShoot()
     {
         
     }

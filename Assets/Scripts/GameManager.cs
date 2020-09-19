@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +11,12 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     [HideInInspector] public bool gameIsOn = false;
+
+
+    public Player player;
+
+
+
 
     private void Awake()
     {
@@ -52,4 +60,22 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+
+    public void OnClickLeftToggleButton()
+    {
+        player.HandleMovePlayer();
+    }
+
+
+    private void OnClickRightToggleButton()
+    {
+
+    }
+
+    private void onClickShootButton()
+    {
+
+    }
+
 }
